@@ -1,0 +1,1 @@
+$(document).ready(function(){var mywindow=$(window);var mypos=mywindow.scrollTop();mywindow.scroll(function(){if(mywindow.scrollTop()>mypos){$('.navbartrans').fadeOut();}else{$('.navbartrans').fadeIn();}mypos=mywindow.scrollTop();});});
