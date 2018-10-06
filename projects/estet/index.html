@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="css/theme.css"> </head>
 
 <body>
+  <a class="yacor" id="top"> </a>
   <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow navbartrans">
     <div class="container">
-      <a href="#" class="uppr">
+      <a href="#top" class="uppr">
         <img src="images/assets/up.png" width="34" height="34" class="d-inline-block align-top mx-auto" alt=""> </a>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="images/logotipi/logo.png" class="d-inline-block align-top logo" alt=""> </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
         <span class="navbar-toggler-icon"></span>
@@ -102,7 +103,7 @@
     </div>
   </div>
   <a class="yacor" id="gallery"> </a>
-  <div class="py-5 text-center bg-light shadow-h">
+  <div class="py-5 text-center bg-light shadow-h cover">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -185,7 +186,7 @@
     </div>
   </div>
   <a class="yacor" id="review"> </a>
-  <div class="py-5 text-center" style="background-image: url('images/assets/black_wood_bg_2.jpg');">
+  <div class="py-5 text-center cover" style="background-image: url('images/assets/black_wood_bg_2.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-light">
@@ -228,15 +229,34 @@
   <script src="js/smooth-scroll.js"></script>
   <script src="js/parallax-bootstrap-4.js" type="text/javascript"></script>
   <script>
-      $(document).ready(function(){
-        $("a[href*=#]").on("click", function(e){
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top
-            }, 777);
-            e.preventDefault();
-            return false;
-        });
+
+jQuery(window).scroll(function(){
+         var $sections = $('section');
+	$sections.each(function(i,el){
+        var top  = $(el).offset().top-100;
+        var bottom = top +$(el).height();
+        var scroll = $(window).scrollTop();
+        var id = $(el).attr('id');
+    	if( scroll > top && scroll < bottom){
+            $('a.activeb').removeClass('activeb');
+			$('a[href="#'+id+'"]').addClass('activeb');
+
+        }
+    })
+ });
+
+$("nav").on("click","a", function (event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
+ 
+        // получем идентификатор блока из атрибута href
+        var id  = $(this).attr('href'),
+ 
+        // находим высоту, на которой расположен блок
+            top = $(id).offset().top;
+         
+        // анимируем переход к блоку, время: 800 мс
+        $('body,html').animate({scrollTop: top}, 800);
     });
   </script>
 </body>
