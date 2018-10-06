@@ -1,1 +1,0 @@
-(function(){$("html").css("display","none");setTimeout(function(){$("html").fadeIn(2000);},500);$().ready(function(){$("a.pfi").click(function(event){event.preventDefault();linkLocation=this.href;$("html").fadeOut(1500,redirectPage);});function redirectPage(){window.location=linkLocation;}});})();
