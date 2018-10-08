@@ -7,16 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/pagefadein.js"></script>
-  <script type="text/javascript" src="js/navbar-trans.js"></script>
-  <link rel="stylesheet" href="css/theme.css"> </head>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" type="text/css" href="./css/slick.css">
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
+</head>
 
 <body>
+  <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script> 
+    $(document).ready(function(){
+      $('.main-pic').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+        cssEase: 'linear'
+      });
+
+      $('.review-pic').slick({
+        dots: true,
+        infinite: true,
+        speed: 700,
+        centerMode: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 8500,
+        fade: true,
+        cssEase: 'linear'
+      });
+
+    });
+  </script>
   <a class="yacor" id="top"> </a>
-  <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light shadow navbartrans">
+  <nav class="navbar navbar-expand-md navbar-light bg-light shadow" id="navbartrans">
+    <a href="#top" class="uppr">
+      <img src="images/assets/up.png" class="d-inline-block align-tomx-auto" alt=""> </a>
     <div class="container">
-      <a href="#top" class="uppr">
-        <img src="images/assets/up.png" width="34" height="34" class="d-inline-block align-top mx-auto" alt=""> </a>
       <a class="navbar-brand" href="index.html">
         <img src="images/logotipi/logo.png" class="d-inline-block align-top logo" alt=""> </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
@@ -44,53 +76,34 @@
       </div>
     </div>
   </nav>
-  <div class="cover shadow-h">
+  <div class="py-5 cover">
     <div class="container">
       <div class="row">
-        <div class="carousel slide containr h-50 px-4" data-ride="carousel" id="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-6">
-                  <img class="d-block imagebox mx-auto" src="images/logotipi/estet_logo_vertical.jpg"> </div>
-                <div class="col-md-6">
-                  <div class="text-dark">
-                    <h1>Продажа входныx дверeй в Кирове по доступным ценам</h1>
-                    <p class="lead w-75">ESTET Дверные технологии - производственный комплекс межкомнатных, входных стальных дверей, межкомнатных арок</p>
-                    <div class="btn-group shadow-m my-3">
-                      <a href="#" class="btn btn-primary">Связаться с&nbsp;
-                        <br>менеджером</a>
-                      <a href="#gallery" class="btn btn-primary">Ознакомиться с&nbsp;
-                        <br>ассортиментом</a>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-md-5">
+          <div id="main-pic-box">
+            <div id="main-pic" class="main-pic positionable my-4">
+              <div>                
+                <img class="img-fluid" src="images/assets/dver-estet.jpg">
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-5">
-                  <img class="d-block imagebox mx-auto" src="images/dveri/d6.jpg"> </div>
-                <div class="col-md-7">
-                  <div class="text-dark">
-                    <h1>Входная дверь Склад 8</h1>
-                    <p class="lead">Размеры 860*2050мм, 960*2050мм. Правое, левое открывание в наличии. Цена 11300 рублей.</p>
-                  </div>
-                </div>
+              <div>
+                <img class="img-fluid" src="images/assets/dver-estet2.jpg">
+              </div>
+              <div>
+                <img class="img-fluid" src="images/assets/dver-estet3.jpg">
               </div>
             </div>
           </div>
         </div>
+        <div class="col-md-7">
+          <h1 class="pt-3">Продажа входныx дверeй в Кирове по доступным ценам</h1>
+          <p class="lead my-3">Компания "Эстет" работает на рынке производства&nbsp;дверей с 2002 года.&nbsp;
+            <br>
+            <br>За это время мы зарекомендовали себя как надежный партнер и динамично развивающаяся компания.</p>
+          <a class="btn btn-primary m-1" href="#">Связаться с менеджером</a>
+          <a class="btn btn-primary m-1" href="#">Ознакомиться с&nbsp;ассортиментом</a>
+        </div>
       </div>
     </div>
-    <a class="carousel-control-prev carousel-button border border-dark shadow-m mx-3" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next carousel-button border border-dark shadow-m mx-3" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
   <div class="py-5" style="background-image: url('images/assets/black_wood_bg.jpg');background-repeat:repeat;background-size:fit;background-position:center top;">
     <div class="container">
@@ -129,136 +142,34 @@
             <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_4.jpg"> </a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_6.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_7.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_8.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_9.jpg"> </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_10.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_11.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_12.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_13.jpg"> </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_15.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_2.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_14.jpg"> </a>
-        </div>
-        <div class="col-md-3 col-6 p-1">
-          <a href="#">
-            <img class="d-block img-fluid" src="https://pingendo.github.io/templates/sections/assets/gallery_16.jpg"> </a>
-        </div>
-      </div>
     </div>
   </div>
-  <a class="yacor" id="review"> </a>
-  <div class="py-5 text-center cover" style="background-image: url('images/assets/black_wood_bg_2.jpg');">
+  <div class="p-5 text-center bg-secondary text-white cover">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-light">
-          <h1>Отзывы покупателей</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item">
-                <img class="d-block img-fluid w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h1 class="mb-4">Отзывы покупателей</h1>
+          <div style="min-height: 65vh;">
+              <div class="review-pic my-4" >
+                <div>                
+                  <img class="img-fluid img-center" src="images/otzivi/otz1.jpg" >
                 </div>
-              </div>
-              <div class="carousel-item active">
-                <img class="d-block img-fluid w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg">
-                <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div>
+                  <img class="img-fluid img-center" src="images/otzivi/otz2.jpg">
+                </div>
+                <div>
+                  <img class="img-fluid img-center" src="images/otzivi/otz3.jpg">
+                </div>
+                <div>
+                  <img class="img-fluid img-center" src="images/otzivi/otz4.jpg">
                 </div>
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
+  <a class="yacor" id="review"> </a>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="js/smooth-scroll.js"></script>
-  <script src="js/parallax-bootstrap-4.js" type="text/javascript"></script>
-  <script>
-
-jQuery(window).scroll(function(){
-         var $sections = $('section');
-	$sections.each(function(i,el){
-        var top  = $(el).offset().top-100;
-        var bottom = top +$(el).height();
-        var scroll = $(window).scrollTop();
-        var id = $(el).attr('id');
-    	if( scroll > top && scroll < bottom){
-            $('a.activeb').removeClass('activeb');
-			$('a[href="#'+id+'"]').addClass('activeb');
-
-        }
-    })
- });
-
-$("nav").on("click","a", function (event) {
-        // исключаем стандартную реакцию браузера
-        event.preventDefault();
- 
-        // получем идентификатор блока из атрибута href
-        var id  = $(this).attr('href'),
- 
-        // находим высоту, на которой расположен блок
-            top = $(id).offset().top;
-         
-        // анимируем переход к блоку, время: 800 мс
-        $('body,html').animate({scrollTop: top}, 800);
-    });
-  </script>
+  <script type="text/javascript" src="js/parallax-bootstrap-4.js"></script>
+  <script type="text/javascript" src="js/xnngee-addition.js"></script>
 </body>
 
 </html>

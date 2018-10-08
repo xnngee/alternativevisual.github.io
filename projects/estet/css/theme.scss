@@ -150,62 +150,177 @@ html,body {
 	}
 }
 
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none; }
+  .carousel-indicators li {
+    position: relative;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(148, 148, 148, 0.5); 
+    border-radius: 100%; }
+    .carousel-indicators li::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      content: ""; }
+    .carousel-indicators li::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      content: ""; }
+  .carousel-indicators .active {
+    background-color: #3AAA3D;
+    border-radius: 100%; }
+
 .carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
 
 .carousel-button {
   position: absolute;
-	height: 50px;
+  height: 50px;
   width: 50px;
   border-radius: 30px;
-
-  top: 42%;
-}
+  top: 42%; }
 
 .shadow {
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
-}
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); }
+
 .shadow-m {
-    box-shadow: 0px 0px 40px rgba(0,0,0,0.2);
-}
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2); }
+
 .shadow-h {
-    box-shadow: 0px 0px 80px rgba(0,0,0,0.35);
-}
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.35); }
 
 .disabled {
-	display: none;
-}
+  display: none; }
 
-.yacor {
-	position: relative;
-}
+#yacor {
+  position: relative; }
 
-.imagebox {
-	max-width: 350px;
-	max-height: 350px;
-}
-.logo{
-  height: 60px;
-}
-@media (max-width: 422px) {
-  .logo{
-  height: 30px;
-  }
-	.imagebox {
-		max-width: 200px;
-		max-height: 200px;
-	}
-}
-.carousel-item {
-	height: 410px;
-}
+.logo {
+  height: 60px; }
+
 .uppr {
-  position: relative;
-	right: 7%;
-	opacity: 0.5;
+  position: fixed;
+  z-index: 1031;
+  left: 2%;
+  opacity: 0.5; 
+  top: 4%;
+  width: 34px;
+  height: 34px;
 }
+.uppr img {
+  width: 34px;
+  height: 34px;
+}
+.uppr:hover{
+   opacity: 1;
+}
+#navbartrans {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: block;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+li.active {
+  border-radius: 3px;
+  background-color: #3AAA3D;
+}
+
+
+@media (max-width: 812px) {
+  .logo {
+    height: 30px; 
+  }
+  .imagebox {
+    max-width: 35vw;
+    max-height: 35vh; 
+  } 
+  .uppr{
+    top: 3.5%;
+    left: 2%;
+    width: 16px;
+    height: 16px;
+  }
+  .uppr img{
+    width: 16px;
+    height: 16px;
+  }
+  }
+
+  @media (max-width: 768px) {
+    h1, .h1 {
+      font-size: 1.75rem; }
+    
+    h2, .h2 {
+      font-size: 1.45rem; }
+    
+    h3, .h3 {
+      font-size: 1.125rem; }
+    
+    h4, .h4 {
+      font-size: 1rem; }
+    
+    h5, .h5 {
+      font-size: 0.9rem; }
+    
+    h6, .h6 {
+      font-size: 0.8rem; }
+    
+    .lead {
+      font-size: 0.8rem;
+      font-weight: 300; }
+    
+    .display-1 {
+      font-size: 6rem;
+      font-weight: 300;
+      line-height: 1.2; }
+    
+    .display-2 {
+      font-size: 5.5rem;
+      font-weight: 300;
+      line-height: 1.2; }
+    
+    .display-3 {
+      font-size: 4.5rem;
+      font-weight: 300;
+      line-height: 1.2; }
+    
+    .display-4 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 1.2; }
+  }
+
+.img-center {
+	margin: auto;
+}
+
