@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" type="text/css" href="./css/slick.css">
   <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="css/lightzoom.css" type="text/css">
+  <script type="text/javascript" src="js/lightzoom.js"></script>
 </head>
 
 <body>
@@ -35,13 +37,13 @@
         speed: 700,
         centerMode: true,
         slidesToShow: 1,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         autoplay: true,
         autoplaySpeed: 8500,
         fade: true,
         cssEase: 'linear'
       });
-
+    jQuery('.lightzoom').lightzoom();
     });
   </script>
   <a class="yacor" id="top"> </a>
@@ -146,23 +148,33 @@
   </div>
   <div class="p-5 text-center bg-secondary text-white cover">
     <div class="container">
-          <h1 class="mb-4">Отзывы покупателей</h1>
-          <div style="min-height: 65vh;">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="mb-4">Отзывы покупателей</h1>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
               <div class="review-pic my-4" >
-                <div>                
-                  <img class="img-fluid img-center" src="images/otzivi/otz1.jpg" >
+                <div>   
+                  <a href="images/otzivi/otz1.jpg" class="lightzoom">
+                  <img class="img-fluid img-center popup" src="images/otzivi/otz1.jpg" ></a>
                 </div>
                 <div>
-                  <img class="img-fluid img-center" src="images/otzivi/otz2.jpg">
+                  <a href="images/otzivi/otz2.jpg" class="lightzoom">
+                  <img class="img-fluid img-center popup" src="images/otzivi/otz2.jpg"></a>
                 </div>
                 <div>
-                  <img class="img-fluid img-center" src="images/otzivi/otz3.jpg">
+                  <a href="images/otzivi/otz3.jpg" class="lightzoom">
+                  <img class="img-fluid img-center popup" src="images/otzivi/otz3.jpg"></a>
                 </div>
                 <div>
-                  <img class="img-fluid img-center" src="images/otzivi/otz4.jpg">
+                  <a href="images/otzivi/otz4.jpg" class="lightzoom">
+                  <img class="img-fluid img-center popup" src="images/otzivi/otz4.jpg"></a>
                 </div>
-              </div>
             </div>
+          </div>
+        </div>
       </div>
     </div>
   <a class="yacor" id="review"> </a>

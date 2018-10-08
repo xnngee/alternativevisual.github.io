@@ -53,11 +53,12 @@ window.onscroll = function() {
         if (prevScrollpos > currentScrollPos) {
             nav.style.top = "0";
         } else {
-            nav.style.top = "-95px";
+            nav.style.top = "-184px";
         }
     prevScrollpos = currentScrollPos;
 }
-////центрирование DIV (class=".positionable")
+/*
+//// центрирование DIV (class=".positionable")
 $(document).ready(function() {
     position();
     function position() {
@@ -69,4 +70,4 @@ $(document).ready(function() {
         });
     }
     position();
-});
+});*/

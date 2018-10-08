@@ -6340,3 +6340,15 @@ li.active {
   height: 100%;
   width: 100%;
 }
+
+.popup {
+  cursor:pointer;
+  -webkit-transition: all 0.7s ease;
+}
+.popup:focus {
+  -webkit-transform: scale(2.5); 
+  -moz-transform: scale(2.5); 
+  -o-transform: scale(2.5); 
+  -ms-transform: scale(2.5);
+  -webkit-transition: all 0.7s ease;
+}
